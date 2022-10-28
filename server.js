@@ -4,14 +4,9 @@ const mongoose = require("mongoose")
 let updatingModals = require("./Schema/hotelveggie")
 app.use(express.json())
 app.use(express.urlencoded({extended:false}))
-app.listen(3003,(err)=>{
-    if(!err)
-    {
-        console.log("Server Started on Port 3003")
-    }
-    else
-     console.log("Server not started kiddo")
-})
+app.listen(process.env.PORT || 3003, function(){
+    console.log("Express server listening on port %d in %s mode", this.address().port, app.settings.env);
+  });
 mongoose.connect("mongodb+srv://Ajith:ajith@hotels.fvhkglh.mongodb.net/?retryWrites=true&w=majority",()=>{
     console.log("cloud Database connected")
 },(err)=>{
