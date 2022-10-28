@@ -15,7 +15,8 @@ mongoose.connect("mongodb+srv://Ajith:ajith@hotels.fvhkglh.mongodb.net/?retryWri
 
 app.get("/veggie",(req,res)=>{
     updatingModals.find().then((datas)=>{
-     res.status(200).send(datas.ResturantName)
+     console.log(datas)
+     res.status(200).send(datas)
     })
 })
 
