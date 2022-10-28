@@ -15,10 +15,9 @@ mongoose.connect("mongodb+srv://Ajith:ajith@hotels.fvhkglh.mongodb.net/?retryWri
 
 app.get("/veggie",(req,res)=>{
     updatingModals.find().then((datas)=>{
-     res.status(200).send(data)
+     res.status(200).send(datas)
     })
 })
-
 app.post("/update/:id/:ratings",(req,res)=>{
     updatingModals.create({ResturantName:req.params.id,Ratings:req.params.ratings}).then((data)=>{
         res.status(200).send("Data Updated Successfully")
