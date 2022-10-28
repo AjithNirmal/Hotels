@@ -13,7 +13,7 @@ mongoose.connect("mongodb+srv://Ajith:ajith@hotels.fvhkglh.mongodb.net/?retryWri
    console.log("Db not connected",err)
 })
 
-app.get("https://hotals.herokuapp.com/veggie",(req,res)=>{
+app.get("/veggie",(req,res)=>{
     updatingModals.find().then((datas)=>{
      res.status(200).send(datas)
     })
