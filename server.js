@@ -19,7 +19,7 @@ app.get("/veggie",(req,res)=>{
     })
 })
 
-app.post("https://hotals.herokuapp.com/update/:id/:ratings",(req,res)=>{
+app.post("/update/:id/:ratings",(req,res)=>{
     updatingModals.create({ResturantName:req.params.id,Ratings:req.params.ratings}).then((data)=>{
         res.status(200).send("Data Updated Successfully")
     }).catch((err)=>{
