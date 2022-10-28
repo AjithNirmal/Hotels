@@ -21,7 +21,7 @@ mongoose.connect("mongodb+srv://Ajith:ajith@hotels.fvhkglh.mongodb.net/?retryWri
 
 
 
-app.get("https://hotals.herokuapp.com//veggie",(req,res)=>{
+app.get("/",(req,res)=>{
     updatingModals.find().then((datas)=>{
      res.status(200).send(datas)
     })
